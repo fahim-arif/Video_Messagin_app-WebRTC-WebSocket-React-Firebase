@@ -1,8 +1,12 @@
-import { initializeApp } from "firebase/app";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import firebase from "firebase/app";
+import "firebase/auth";
+import "firebase/database";
+import "firebase/storage";
+
 const firebaseConfig = {
   apiKey: "AIzaSyBCTmhwBuLgoOSkdSgdh2PFYSkSITWx1YA",
   authDomain: "whatsappclone-892db.firebaseapp.com",
+  databaseURL: "https://whatsappclone-892db-default-rtdb.firebaseio.com",
   projectId: "whatsappclone-892db",
   storageBucket: "whatsappclone-892db.appspot.com",
   messagingSenderId: "730502252356",
@@ -10,6 +14,6 @@ const firebaseConfig = {
   measurementId: "G-FJG4M52Y7L",
 };
 
-const app = initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 
-export default app;
+export default firebase;
